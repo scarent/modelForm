@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from modelFormApp import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
     path('proyectos/', views.listadoProyecto),
-    path('agregarProyecto/',views.agregarProyecto)
+    path('agregarProyecto/',views.agregarProyecto),
+    path('eliminarProyecto/<int:id>',views.eliminarProyecto),
+    path('actualizarProyecto/<int:id>',views.actualizarProyecto),
     ]
